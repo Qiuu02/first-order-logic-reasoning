@@ -1,0 +1,88 @@
+{
+	"vampire_run": {
+		"--input_syntax": "tptp"
+	},
+	"formulas": {
+		"$false": 30760,
+
+		"~inj(sK0,sK1)": 30741,
+		"~inj(X0,sK1) | ~inj(sK0,sK1)": 984,
+		"~inj(X0,sK1) | ~inj(X0,sK1) | ~inj(sK0,sK1)": 981,
+		"inj(sK0,sK1)": 980,
+		"inj(sK0,sK1) | inj(sK0,sK1) | inj(sK0,sK1)": 977,
+
+		"~inj(sK0,X2) | ~inj(X3,X2) | ~inj(X3,sK1) | ~inj(sK0,sK1)": 16,
+		"inj(sK3,sK1) | inj(sK0,sK1)": 13,
+
+		"~inj(sK3,X0) | inj(sK0,sK1) | inj(sK0,X0)": 2738,
+		"sQ4_eqProxy(X0,X0)    ": 448,
+		"~sQ4_eqProxy(X0,X1) | inj(sK0,sK1) | ~inj(sK3,X0) | inj(sK0,X1)": 99,
+		"sQ4_eqProxy(sK3,sK0) | inj(sK0,sK1)": 68,
+		"sQ4_eqProxy(sK0,sK3) | inj(sK0,sK1)": 51,
+		"sQ4_eqProxy(sK0,sK3) | inj(sK0,sK1) | inj(sK0,sK1)": 48,
+
+		"~inj(X0,sK2) | sQ4_eqProxy(sK0,X0) | inj(sK0,sK1)": 28,
+		"~inj(X0,X1) | sQ4_eqProxy(X0,X2) | ~inj(X2,X1)": 18,
+		"inj(sK0,sK2) | inj(sK0,sK1)": 15,
+		"inj(sK3,sK2) | inj(sK0,sK1)": 14,
+
+		"sQ4_eqProxy(X0,X0)   ": 76,
+		"sQ4_eqProxy(X0,X0)  ": 25,
+		"sQ4_eqProxy(X0,X0) ": 24,
+		"~sQ4_eqProxy(X0,X1) | sQ4_eqProxy(X1,X0)": 21,
+		"sQ4_eqProxy(X0,X0)": 20
+		},
+	"proof": [
+		30760,
+		[30741,
+			[984,
+			[981,
+				[977,
+				[2738,
+					[448,
+					[76,
+						[25,
+						[24,
+							[21],
+							[20]
+						],
+						[21]
+						],
+						[21]
+					],
+					[21]
+					],
+					[99,
+					[68,
+						[51,
+						[48,
+							[28,
+							[18],
+							[15]
+							],
+							[14]
+						]
+						],
+						[21]
+					],
+					[19]
+					]
+				],
+				[13]
+				]
+			],
+			[16]
+			],
+			[980]
+		],
+		[980]
+	],
+	"resolution": {
+		"active": [13, 14, 15, 16, 20, 21, 24, 18],
+		"passive": [22, 19, 23, 25],
+		"unprocessed": [26, 27, 28],
+		"premises": [18, 14],
+		"conclusion": 27,
+		"mgu": [{"X1": "sK2", "X2": "sK3"}, {}]
+	}
+}

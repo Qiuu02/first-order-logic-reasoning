@@ -1,0 +1,17 @@
+{
+  "vampire_run": {
+    "--input_syntax": "tptp",
+    "--mode": "portfolio"
+  },
+  "formulas": {
+    "72": "~wolf(sK0)",
+    "657": "wolf(sK0)",
+    "662": "$false"
+  },
+  "proof": [662, [657], [72]],
+  "resolution": {
+    "premises": [657, 72],
+    "conclusion": 662,
+    "mgu": [{}, {}]
+  }
+}

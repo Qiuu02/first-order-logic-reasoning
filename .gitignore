@@ -1,0 +1,14 @@
+# Temporary LaTeX files
+*.aux
+*.log
+*.pdf
+
+# Temporary outputs
+*.out
+*.tmp
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/

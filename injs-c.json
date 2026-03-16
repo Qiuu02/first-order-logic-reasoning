@@ -1,0 +1,155 @@
+{
+	"vampire_run": {
+		"--bad_option": "off",
+		"--input_syntax": "tptp",
+		"-s": "1",
+		"-awr": "5:1",
+		"-ep": "off"
+	},
+	"formulas": {
+		"$false": 27828,
+
+		"! [X0:$i, X1:$i, X2:$i]: X0 = X2 | ~inj(X0,X1) | ~inj(X2,X1)": 12,
+
+		"inj(sK3,sK1) | inj(sK0,sK1)": 13,
+		"inj(sK3,sK2) | inj(sK0,sK1)": 14,
+		"inj(sK0,sK2) | inj(sK0,sK1)": 15,
+
+		"! [X2:$i, X3:$i]: ~inj(sK0,X2) | ~inj(X3,X2) | ~inj(X3,sK1) | ~inj(sK0,sK1)": 16,
+
+		"! [X0:$i]: sK3 = X0 | ~inj(X0,sK2) | inj(sK0,sK1)": 19,
+		"! [X0:$i]: sK0 = X0 | ~inj(X0,sK2) | inj(sK0,sK1)": 20,
+
+		"sK0 = sK3 | inj(sK0,sK1) | inj(sK0,sK1)": 24,
+		"inj(sK0,sK1) | sK0 = sK3": 25,
+
+		"sK0 = sK3 | ~inj(X0,sK1) | ~inj(X0,sK1) | ~inj(sK0,sK1)": 27,
+		"~inj(X0,sK1) | sK0 = X0 | sK0 = sK3": 29,
+		"~inj(X0,sK1) | sK0 = sK3 | ~inj(sK0,sK1)": 31,
+
+		"sK0 = sK3 | inj(sK0,sK1) | inj(sK0,sK1) ": 32,
+		"inj(sK0,sK1) | sK0 = sK3 ": 35,
+
+		"sK0 = sK3 | ~inj(X0,sK1) | ~inj(X0,sK1) | ~inj(sK0,sK1) ": 36,
+		"~inj(X0,sK1) | sK0 = sK3 | ~inj(sK0,sK1) ": 40,
+
+		"sK0 = sK3 | sK0 = sK3 | inj(sK0,sK1)": 51,
+		"inj(sK0,sK1) | sK0 = sK3  ": 60,
+
+		"sK0 = sK3 | ~inj(sK0,sK1) | sK0 = sK3": 73,
+		"~inj(sK0,sK1) | sK0 = sK3": 74,
+
+		"sK0 = sK3 | ~inj(sK0,sK1) | sK0 = sK3 ": 96,
+		"~inj(sK0,sK1) | sK0 = sK3 ": 97,
+
+		"sK0 = sK3 | sK0 = sK3": 134,
+		"sK0 = sK3": 135,
+
+		"inj(sK0,sK1) | inj(sK0,sK1)": 222,
+		"inj(sK0,sK1)": 223,
+
+		"inj(sK0,sK1) | inj(sK0,sK1) ": 338,
+		"inj(sK0,sK1) ": 340,
+
+		"~inj(X0,sK1) | ~inj(X0,sK1) | ~inj(sK0,sK1)": 346,
+		"~inj(X0,sK1) | ~inj(sK0,sK1)": 353,
+
+		"~inj(sK0,sK1)": 1773,
+
+		"inj(sK0,sK1) | inj(sK0,sK1)  ": 1698,
+		"inj(sK0,sK1)  ": 1700,
+
+		"sK0 = sK3 ": 220,
+		"sK0 = sK3  ": 852
+		},
+	"proof": [
+		27828,
+		[1773,
+			[353,
+			[346,
+				[223,
+				[222,
+					[13],
+					[135,
+					[134,
+						[74,
+						[73,
+							[31,
+							[27,
+								[25,
+								[24,
+									[19, [12], [14]],
+									[15]
+								]
+								],
+								[16]
+							]
+							],
+							[25]
+						]
+						],
+						[60,
+						[51,
+							[29,
+							[25],
+							[12]
+							],
+							[13]
+						]
+						]
+					]
+					]
+				]
+				],
+				[16]
+			],
+			[223]
+			]
+		],
+		[1700,
+			[1698,
+			[13],
+			[852,
+				[340,
+				[338,
+					[13],
+					[220,
+					[205,
+						[97,
+						[96,
+							[40,
+							[36,
+								[35,
+								[32,
+									[20,
+									[12],
+									[15]
+									],
+									[14]
+								]
+								],
+								[16]
+							]
+							],
+							[25]
+						]
+						],
+						[25]
+					]
+					]
+				]
+				],
+				[74]
+			]
+			]
+		]
+	],
+	"resolution": {
+		"active": [13, 14, 15, 16, 12],
+		"passive": [],
+		"unprocessed": [17, 18, 19, 20],
+		"premises": [12, 14],
+		"conclusion": 19,
+		"mgu": [{"X1": "sK2", "X2": "sK3"}, {}]
+	}
+}

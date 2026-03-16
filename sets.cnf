@@ -1,0 +1,42 @@
+cnf(u1,axiom,
+    ~member(X0,X1) | ~subset(X1,X2) | member(X0,X2)).
+
+cnf(u2,axiom,
+    subset(X0,X1) | member(member_of_1_not_of_2(X0,X1),X0)).
+
+cnf(u3,axiom,
+    ~member(member_of_1_not_of_2(X0,X1),X1) | subset(X0,X1)).
+
+cnf(u4,axiom,
+    ~equal_sets(X0,X1) | subset(X0,X1)).
+
+cnf(u5,axiom,
+    ~equal_sets(X0,X1) | subset(X1,X0)).
+
+cnf(u6,axiom,
+    ~subset(X0,X1) | ~subset(X1,X0) | equal_sets(X1,X0)).
+
+cnf(u26,axiom,
+    member(X1,dirimg(X0)) | ~member(X2,X0) | ~role(X2,X1)).
+
+cnf(u25,axiom,
+    member(sK0(X0,X1),X0) | ~member(X1,dirimg(X0))).
+
+cnf(u24,axiom,
+    role(sK0(X0,X1),X1) | ~member(X1,dirimg(X0))).
+
+cnf(u29,axiom,
+    member(X1,valres(X0)) | ~member(sK1(X0,X1),X0)).
+
+cnf(u28,axiom,
+    member(X1,valres(X0)) | role(X1,sK1(X0,X1))).
+
+cnf(u27,axiom,
+    member(X3,X0) | ~role(X1,X3) | ~member(X1,valres(X0))).
+
+cnf(u31,negated_conjecture,
+    ~subset(sK2,valres(sK3)) | ~subset(dirimg(sK2),sK3)).
+
+cnf(u30,negated_conjecture,
+    subset(sK2,valres(sK3)) | subset(dirimg(sK2),sK3)).
+

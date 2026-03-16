@@ -1,0 +1,130 @@
+% Detected minimum model sizes of [6]
+% Detected maximum model sizes of [max]
+% TRYING [6]
+% Finite Model Found!
+% SZS status Satisfiable for pets
+% SZS output start FiniteModel for pets
+tff('declare_$i1',type,'fmb_$i_1':$i).
+tff('declare_$i2',type,'fmb_$i_2':$i).
+tff('declare_$i3',type,'fmb_$i_3':$i).
+tff('declare_$i4',type,'fmb_$i_4':$i).
+tff('declare_$i5',type,'fmb_$i_5':$i).
+tff('declare_$i6',type,'fmb_$i_6':$i).
+tff('finite_domain_$i',axiom,
+      ! [X:$i] : (
+         X = 'fmb_$i_1' | X = 'fmb_$i_2' | X = 'fmb_$i_3' | X = 'fmb_$i_4' | X = 'fmb_$i_5' | 
+         X = 'fmb_$i_6'
+      ) ).
+
+tff('distinct_domain_$i',axiom,
+         'fmb_$i_1' != 'fmb_$i_2' & 'fmb_$i_1' != 'fmb_$i_3' & 'fmb_$i_1' != 'fmb_$i_4' & 'fmb_$i_1' != 'fmb_$i_5' & 'fmb_$i_1' != 'fmb_$i_6' & 
+         'fmb_$i_2' != 'fmb_$i_3' & 'fmb_$i_2' != 'fmb_$i_4' & 'fmb_$i_2' != 'fmb_$i_5' & 'fmb_$i_2' != 'fmb_$i_6' & 'fmb_$i_3' != 'fmb_$i_4' & 
+         'fmb_$i_3' != 'fmb_$i_5' & 'fmb_$i_3' != 'fmb_$i_6' & 'fmb_$i_4' != 'fmb_$i_5' & 'fmb_$i_4' != 'fmb_$i_6' & 'fmb_$i_5' != 'fmb_$i_6'
+).
+
+tff(declare_r1,type,r1:$i).
+tff(r1_definition,axiom,r1 = 'fmb_$i_1').
+tff(declare_r2,type,r2:$i).
+tff(r2_definition,axiom,r2 = 'fmb_$i_2').
+tff(declare_r3,type,r3:$i).
+tff(r3_definition,axiom,r3 = 'fmb_$i_3').
+tff(declare_r4,type,r4:$i).
+tff(r4_definition,axiom,r4 = 'fmb_$i_4').
+tff(declare_r5,type,r5:$i).
+tff(r5_definition,axiom,r5 = 'fmb_$i_5').
+tff(declare_r6,type,r6:$i).
+tff(r6_definition,axiom,r6 = 'fmb_$i_6').
+tff(declare_next,type,next: ($i * $i) > $o).
+tff(predicate_next,axiom,
+           ~next('fmb_$i_1','fmb_$i_1')
+         & next('fmb_$i_1','fmb_$i_2')
+         & ~next('fmb_$i_1','fmb_$i_3')
+         & ~next('fmb_$i_1','fmb_$i_4')
+         & ~next('fmb_$i_1','fmb_$i_5')
+         & ~next('fmb_$i_1','fmb_$i_6')
+         & ~next('fmb_$i_2','fmb_$i_1')
+         & ~next('fmb_$i_2','fmb_$i_2')
+         & next('fmb_$i_2','fmb_$i_3')
+         & ~next('fmb_$i_2','fmb_$i_4')
+         & ~next('fmb_$i_2','fmb_$i_5')
+         & ~next('fmb_$i_2','fmb_$i_6')
+         & ~next('fmb_$i_3','fmb_$i_1')
+         & ~next('fmb_$i_3','fmb_$i_2')
+         & ~next('fmb_$i_3','fmb_$i_3')
+         & next('fmb_$i_3','fmb_$i_4')
+         & ~next('fmb_$i_3','fmb_$i_5')
+         & ~next('fmb_$i_3','fmb_$i_6')
+         & ~next('fmb_$i_4','fmb_$i_1')
+         & ~next('fmb_$i_4','fmb_$i_2')
+         & ~next('fmb_$i_4','fmb_$i_3')
+         & ~next('fmb_$i_4','fmb_$i_4')
+         & next('fmb_$i_4','fmb_$i_5')
+         & ~next('fmb_$i_4','fmb_$i_6')
+         & ~next('fmb_$i_5','fmb_$i_1')
+         & ~next('fmb_$i_5','fmb_$i_2')
+         & ~next('fmb_$i_5','fmb_$i_3')
+         & ~next('fmb_$i_5','fmb_$i_4')
+         & ~next('fmb_$i_5','fmb_$i_5')
+         & next('fmb_$i_5','fmb_$i_6')
+         & ~next('fmb_$i_6','fmb_$i_1')
+         & ~next('fmb_$i_6','fmb_$i_2')
+         & ~next('fmb_$i_6','fmb_$i_3')
+         & ~next('fmb_$i_6','fmb_$i_4')
+         & ~next('fmb_$i_6','fmb_$i_5')
+         & ~next('fmb_$i_6','fmb_$i_6')
+
+).
+
+tff(declare_cat,type,cat: ($i) > $o).
+tff(predicate_cat,axiom,
+           cat('fmb_$i_1')
+         & ~cat('fmb_$i_2')
+         & ~cat('fmb_$i_3')
+         & ~cat('fmb_$i_4')
+         & cat('fmb_$i_5')
+         & ~cat('fmb_$i_6')
+
+).
+
+tff(declare_dog,type,dog: ($i) > $o).
+tff(predicate_dog,axiom,
+           ~dog('fmb_$i_1')
+         & dog('fmb_$i_2')
+         & dog('fmb_$i_3')
+         & dog('fmb_$i_4')
+         & ~dog('fmb_$i_5')
+         & ~dog('fmb_$i_6')
+
+).
+
+tff(declare_hamster,type,hamster: ($i) > $o).
+tff(predicate_hamster,axiom,
+           ~hamster('fmb_$i_1')
+         & ~hamster('fmb_$i_2')
+         & ~hamster('fmb_$i_3')
+         & ~hamster('fmb_$i_4')
+         & ~hamster('fmb_$i_5')
+         & hamster('fmb_$i_6')
+
+).
+
+tff(declare_lit,type,lit: ($i) > $o).
+tff(predicate_lit,axiom,
+           ~lit('fmb_$i_1')
+         & ~lit('fmb_$i_2')
+         & lit('fmb_$i_3')
+         & ~lit('fmb_$i_4')
+         & ~lit('fmb_$i_5')
+         & ~lit('fmb_$i_6')
+
+).
+
+% SZS output end FiniteModel for pets
+% ------------------------------
+% Version: Vampire 5.0.1 (Release build, commit 5c5d65f23 on 2026-02-19 18:18:18 +0000)
+% CaDiCaL version: 2.1.3
+% Termination reason: Satisfiable
+% Time elapsed: 0.001 s
+% Peak memory usage: 9 MB
+% ------------------------------
+% ------------------------------

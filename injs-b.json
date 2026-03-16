@@ -1,0 +1,83 @@
+{
+	"vampire_run": {
+		"--input_syntax": "tptp",
+		"-s": 0,
+		"-awr": "10:1"
+	},
+	"formulas": {
+		"$false": 927319,
+
+		"inj(sK3,sK1) | inj(sK0,sK1)": 13,
+		"inj(sK3,sK2) | inj(sK0,sK1)": 14,
+		"inj(sK0,sK2) | inj(sK0,sK1)": 15,
+		"~inj(sK0,X2) | ~inj(X3,X2) | ~inj(X3,sK1) | ~inj(sK0,sK1)": 16,
+
+		"sQ4_eqProxy(X0,X0)": 20,
+		"~sQ4_eqProxy(X0,X1) | ~sQ4_eqProxy(X2,X3) | ~inj(X0,X2) | inj(X1,X3)": 19,
+		"sQ4_eqProxy(X0,X2) | ~inj(X0,X1) | ~inj(X2,X1)": 18,
+
+		"! [X0:$i]: sQ4_eqProxy(X0,sK0) | ~inj(X0,sK2) | inj(sK0,sK1)": 66,
+		"sQ4_eqProxy(sK3,sK0) | inj(sK0,sK1) | inj(sK0,sK1)": 708,
+		"sQ4_eqProxy(sK3,sK0) | inj(sK0,sK1)": 756,
+
+		"! [X0:$i, X1:$i]: ~sQ4_eqProxy(sK3,X0) | ~sQ4_eqProxy(sK1,X1) | inj(X0,X1) | inj(sK0,sK1)": 86,
+		"~sQ4_eqProxy(sK3,X0) | inj(X0,sK1) | inj(sK0,sK1)": 1134,
+
+		"inj(sK0,sK1) | inj(sK0,sK1) | inj(sK0,sK1)": 53928,
+		"inj(sK0,sK1)": 54503,
+
+		"~inj(sK0,sK1) | ~inj(sK0,sK1) | ~inj(sK0,sK1) | inj(sK0,sK2)": 28,
+		"~inj(sK0,sK1) | inj(sK0,sK2)": 46,
+		"~inj(sK0,sK1) | ~inj(X0,sK2) | ~inj(X0,sK1) | ~inj(sK0,sK1)": 126,
+		"~inj(sK0,sK1) | ~inj(X0,sK2) | ~inj(X0,sK1)": 132,
+		"~inj(sK0,sK1) | ~inj(sK0,sK1) | ~inj(sK0,sK1)": 14172,
+		"~inj(sK0,sK1)": 14303
+		},
+	"proof": [
+		927319,
+		[54503,
+			[53928,
+			[1134,
+				[86,
+				[19],
+				[13]
+				],
+				[20]
+			],
+			[756,
+				[708,
+				[66,
+					[18],
+					[15]
+				],
+				[14]
+				]
+			]
+			]
+		],
+		[14303,
+			[14172,
+			[132,
+				[126,
+				[46,
+					[28,
+					[16],
+					[15]
+					]
+				],
+				[16]
+				]
+			],
+			[46]
+			]
+		]
+	],
+	"resolution": {
+		"active": [13, 14, 15, 16, 20, 21, 18],
+		"passive": [22, 19, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53],
+		"unprocessed": [54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66],
+		"premises": [18, 15],
+		"conclusion": 66,
+		"mgu": [{"X2": "sK0", "X1": "sK2"}, {}]
+	}
+}

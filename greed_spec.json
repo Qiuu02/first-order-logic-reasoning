@@ -1,0 +1,31 @@
+{
+	"vampire_run": {
+		"--input_syntax": "tptp",
+		"-s": "0",
+		"-awr": "10:1"
+	},
+	"formulas": {
+	"12": "loves(X0,sK0(X0)) | ~happy(X0)",
+	"13": "happy(X0) | ~loves(X0,X1)",
+	"14": "loves(X0,money) | ~rich(X0)",
+	"15": "rich(giles)",
+	"16": "~happy(giles)",
+	"17": "~loves(giles,X0)",
+	"18": "~rich(X0) | happy(X0)",
+	"19": "loves(giles,money)",
+	"21": "loves(X0,sK0(X0)) | ~loves(X0,X1)",
+	"22": "~rich(giles)",
+	"23": "~happy(giles)",
+	"24": "$false",
+	"25": "happy(giles)"
+	},
+	"proof": [24, [19], [17]],
+	"resolution": {
+		"active": [16, 15, 13, 14, 12, 17, 19],
+		"passive": [21, 23, 22, 18],
+		"unprocessed": [24, 25],
+		"premises": [19, 17],
+		"conclusion": 24,
+		"mgu": [{}, {"X0": "money"}]
+	}
+}
